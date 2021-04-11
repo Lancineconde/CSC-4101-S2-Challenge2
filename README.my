@@ -1,0 +1,23 @@
+To start the installation of the automata library is compulsory for this code to run.
+Pip install automata-lib is used to install the required library. 
+The variable “state” has all the states that are going to be used in this case.
+The variable input symbols has two variables 0 that represents false and 1 that represents true 
+The states naming “a,b,c…”  is done to shorten the original names in the state diagram.
+a is the (idle) state
+b is the state (enter the coins or money)
+c is the state (counts money) where the machine counts the money
+d is the state (green light) where the light become green for all available product
+e is the state (choose item)
+f is the state dispense item
+g is the state (balance) where the customer gets his balance if any
+and finally we have the trap state named (trap)
+Each state has its output(s) when the inputs symbols are applied to it. 
+  'a':{'0':'trap','1':'b'}
+For example, the above line means that the state “a” goes to the trap state when the input symbol is false (0) and the same state goes to “b” when the input symbol is True (1).
+And this goes on for every single state in the state diagram.
+   initial_state = 'a', this line means that the only one initial state is “a”
+   final_states ={'g','f'} This indicates that we have two different finial states either state “g” or state “f”.
+dfa.accepts_input('       ') is a build in function and the parameter used is going to be check wether it is true or false meaning accepted or rejected and that depends on the state diagram.
+
+
+
